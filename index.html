@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <link rel="stylesheet" href="page_style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <p class="loko_name">
+            Enter All Your Details :-
+            <br> Here
+        </p>
+    </div>
+    <div class="mainbar">
+        <form action="" class="login_form">
+            <div class="button_logs">
+                <button id="button_signin"  onclick="signinFunction()">sign-in</button>
+                <button id="button_signup" onclick="signupFunction()">sign-up</button>
+            </div>
+            <h2 class="login_name" id="id1">sign-in/sign-up</h2>
+            <h2 class="signup_name" id="id1"></h2>
+            <label for="" id="userId"> <p>User_name : </p><input type="text" id="U_id"></label>
+            <label for="" id="emailId"><p>Email : </p><input type="text" id="Email"></label>
+            <label for="" id="passId"><p>password : </p><input type="text" id="Pass"></label>
+            <label for="" id="cPass"><p>Confirm password : </p><input type="text" id="C_pass"></label>
+            <button id="subBtn" onclick="submitFunction()">
+                submit
+            </button>
+        </form>
+    </div>
+</body>
+<script>
+
+    function signinFunction(){
+        document.getElementById('button_signin').style.background="grey";
+        document.getElementById('button_signin').style.color="red";
+        document.getElementById('button_signup').style.background="";
+        document.getElementById('button_signup').style.color="";
+        document.getElementById('emailId').style.display="none";
+        document.getElementById('cPass').style.display="none";
+        event.preventDefault();
+    }
+    function signupFunction(){
+        document.getElementById('button_signin').style.background="";
+        document.getElementById('button_signin').style.color="";
+        document.getElementById('button_signup').style.background="grey";
+        document.getElementById('button_signup').style.color="red";
+        document.getElementById('emailId').style.display="";
+        document.getElementById('cPass').style.display="";
+
+        event.preventDefault();
+    }
+    function submitFunction(){
+        document.getElementById('subBtn').style.background="grey";
+        document.getElementById('subBtn').style.color="red";
+        alert("form have submited")
+        event.preventDefault();
+    }
+</script>
+</html>
